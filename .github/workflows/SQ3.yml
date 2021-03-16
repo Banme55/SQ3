@@ -1,8 +1,8 @@
-name: 书旗3
+name: SQ3
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 2,8 * * *'
+    - cron: '0 2,7 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest 
@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/jeverme/SQ3.git ~/SQ3
+          git clone https://github.com/Banme/SQ3.git ~/SQ3
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
@@ -23,7 +23,7 @@ jobs:
           npm install request
           curl ipinfo.io/json
 
-      - name: '【书旗小说3】'
+      - name: '【SQ3】'
         run: |
           cd ~/SQ3/Task   
           node sqxs.js
